@@ -9,7 +9,7 @@ namespace PootModHelper
         public static MyMod Instance { get; private set; }
 
         public const string modName = "Poot Mod Helper";
-        public const string modVersion = "1.0.0.0";
+        public const string modVersion = "0.0.1";
         public const string modAuthor = "Gurrenm4";
 
         public override void OnApplicationStart()
