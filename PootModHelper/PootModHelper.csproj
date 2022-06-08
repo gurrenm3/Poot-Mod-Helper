@@ -46,14 +46,18 @@
   <Import Condition="!Exists('..\..\poot.targets')" Project="poot.targets" />
   <ItemGroup>
     <Compile Include="Api\PootMod.cs" />
+    <Compile Include="Extensions\Game\GameControllerExtensions.cs" />
+    <Compile Include="Extensions\Localization\LocalizeTextProviderExtensions.cs" />
     <Compile Include="MyMod.cs" />
+    <Compile Include="Patches\Game\GameController_QuitGame.cs" />
+    <Compile Include="Patches\Game\GameController_OnPaused.cs" />
+    <Compile Include="Patches\Game\GameController_Init.cs" />
+    <Compile Include="Patches\Game\GameController_OnResume.cs" />
     <Compile Include="Patches\UI\UITitleManager_Open.cs" />
     <Compile Include="PatchManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Extensions\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="poot.targets" />
   </ItemGroup>

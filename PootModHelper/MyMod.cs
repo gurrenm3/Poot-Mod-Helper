@@ -1,4 +1,8 @@
-﻿using MelonLoader;
+﻿using BokuMono;
+using BokuMono.Utility;
+using System;
+using Il2CppSystem.Collections.Generic;
+using MelonLoader;
 using PootModHelper.Api;
 
 namespace PootModHelper
@@ -20,6 +24,16 @@ namespace PootModHelper
             Logger = LoggerInstance;
 
             Logger.Msg($"{modName} has finished loading");
+        }
+
+        public override void OnMainMenu()
+        {
+            
+        }
+
+        public override void OnGameJoined()
+        {
+
         }
     }
 }
