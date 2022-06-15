@@ -18,7 +18,7 @@ using System.Runtime.InteropServices;
 
 // Melonloader stuff
 [assembly: MelonInfo(typeof(MyMod), MyMod.modName, MyMod.modVersion, MyMod.modAuthor)]
-[assembly: MelonGame("XSEED Games _ Marvelous USA, Inc.", "STORY OF SEASONS Pioneers of Olive Town")]
+[assembly: MelonGame("XSEED Games / Marvelous USA, Inc.", "STORY OF SEASONS Pioneers of Olive Town")]
 
 [assembly: MelonColor(ConsoleColor.Blue)]
 [assembly: MelonPriority(-1000)]

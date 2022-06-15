@@ -1,5 +1,6 @@
 ﻿using BokuMono;
 using BokuMono.Data;
+using BokuMono.FieldEvent;
 using BokuMono.Utility;
 using MelonLoader;
 using System;
@@ -60,7 +61,51 @@ namespace PootModHelper.Api
         /// <summary>
         /// The instance of <see cref="LanguageManager"/>.
         /// </summary>
-        public LanguageManager languageManager => gameController?.GetLanguageMaster();
+        public LanguageManager languageMgr => gameController?.GetLanguageMaster();
+
+        /// <summary>
+        /// The instance of <see cref="MakerManager"/>.
+        /// </summary>
+        public MakerManager makerMgr => SingletonManagerAccessorBehaviour<MakerManager>.Instance;
+
+        /// <summary>
+        /// The instance of <see cref="MarriageManager"/>.
+        /// </summary>
+        public MarriageManager marriageMgr => SingletonManagerAccessorBehaviour<MarriageManager>.Instance;
+
+        /// <summary>
+        /// The instance of <see cref="AchieveManager"/>.
+        /// </summary>
+        public AchieveManager achieveMgr => SingletonManagerAccessorBehaviour<AchieveManager>.Instance;
+
+        public CityDevelopManager cityDevelopMgr => SingletonManagerAccessorBehaviour<CityDevelopManager>.Instance;
+
+        public CookingManager cookingMgr => SingletonManagerAccessorBehaviour<CookingManager>.Instance;
+
+        public DateManager dateMgr => SingletonManagerAccessorBehaviour<DateManager>.Instance;
+
+        public DlcManager dlcMgr => SingletonManagerAccessorBehaviour<DlcManager>.Instance;
+
+        public DialogOpenRequestManager dialogOpenRequestMgr => SingletonManagerAccessorBehaviour<DialogOpenRequestManager>.Instance;
+
+        public EventManager eventMgr => SingletonManagerAccessorBehaviour<EventManager>.Instance;
+
+        public FieldManager fieldMgr => SingletonManagerAccessorBehaviour<FieldManager>.Instance;
+
+        public FishManager fishMgr => SingletonManagerAccessorBehaviour<FishManager>.Instance;
+
+        public FontReferenceManager fontReferenceMgr => SingletonManagerAccessorBehaviour<FontReferenceManager>.Instance;
+
+        public GourmetHouseManager gourmetHouseMgr => SingletonManagerAccessorBehaviour<GourmetHouseManager>.Instance;
+
+        public HelpManager helpMgr => SingletonManagerAccessorBehaviour<HelpManager>.Instance;
+
+        public KoroponManager koroponMgr => SingletonManagerAccessorBehaviour<KoroponManager>.Instance;
+
+        public LikeabilityManager likeabilityMgr => SingletonManagerAccessorBehaviour<LikeabilityManager>.Instance;
+
+        public MuseumManager MuseumMgr => SingletonManagerAccessorBehaviour<MuseumManager>.Instance;
+
 
 
 
@@ -141,7 +186,7 @@ namespace PootModHelper.Api
         public override void OnApplicationStart()
         {
             base.OnApplicationStart();
-            modFolder = $"{Environment.CurrentDirectory}\\Mods\\{this.Info.Name}";
+            modFolder = $"{System.Environment.CurrentDirectory}\\Mods\\{this.Info.Name}";
             Directory.CreateDirectory(modFolder);
         }
 

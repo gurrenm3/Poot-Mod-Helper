@@ -13,7 +13,7 @@ namespace PootModHelper
         public static MyMod Instance { get; private set; }
 
         public const string modName = "Poot Mod Helper";
-        public const string modVersion = "0.0.1";
+        public const string modVersion = "0.0.2";
         public const string modAuthor = "Gurrenm4";
 
         public override void OnApplicationStart()
@@ -28,6 +28,7 @@ namespace PootModHelper
 
         public override void OnMainMenu()
         {
+            var table = languageMgr.textProvider.GetTextTable(LocalizeTextTableType.Angela);
             
         }
 
